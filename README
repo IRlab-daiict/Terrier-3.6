@@ -1,0 +1,3 @@
+This contains the code of Terrier(an open-source search engine) tool used for information retrieval of large data. The code works well for TREC as well as NXML format documents. 
+
+For topic modelling done by another tool MALLET, this tool does query expansion and performs retrieval accordingly. 
