@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Future Features and Known Issues</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="docs.css">
+</head>
+
+<body>
+<!--!bodystart-->
+[<a href="dfr_description.html">Previous: DFR Description</a>] [<a href="index.html">Contents</a>] [<a href="bibliography.html">Next: Bibliography</a>]
+</br><br><h1>Terrier Future Features and Known Issues</h1>
+<p>List of features and known issues that are marked for future Terrier versions:<br/>
+<h2>Future Features</h2>
+<ul>
+<li>New types of indices. In Terrier 4.0, the central <a href="javadoc/org/terrier/structures/Index.html">Index</a> class will become abstract and will be extended by different types of index. Current index functionality will move to new type of index called IndexOnDisk.</li>
+<li>The structures within an index will become more generic. In Terrier 4.0, Inverted and Direct indices will become <a href="javadoc/org/terrier/structures/PostingIndex.html">PostingIndex</a> instances instead of being separate classes like <a href="javadoc/org/terrier/structures/InvertedIndex.html">InvertedIndex</a>. New code should use PostingIndex where possible.</li>
+<li>New index types that can be updated incrementally will be added In Terrier 4.0. These will allow new documents to be added on-the-fly for real-time search applications.</li>
+<li>Functionality to create memory-only indices that can be incrementally updated over time.</li>
+<li>Functionality to create, modify and search over groups of separate indices as if they were one index.</li>    
+<li>Improved Learning-to-Rank support with result sets that can hold document feature information.</li>
+<li>Move towards a modular sub-package structure to facilitate the release of non-core functionalities.</li> 
+<li>The addition of Terrier's own Exceptions for setup, indexing, querying.</li>
+</ul> 
+<h2>Known Issues</h2>
+<ul>
+<li>Query language should be refined: In particular, ambiguity warnings when generating the parser with ANTLR should be removed, and a more structured query language should be introduced.</li>
+</ul>
+<h2>Deprecations, Scheduled Refactorings</h2>
+<p>The following classes and interfaces are/may be deprecated in this version of Terrier and will likely be removed or refactored in a future release:</p>
+<ul>
+<li><a href="javadoc/org/terrier/indexing/Indexer.html">Indexer</a> and <a href="javadoc/org/terrier/structures/indexing">org.terrier.structures.indexing</a> hierarchy may be refactored in a future release.</li>
+<li><a href="javadoc/org/terrier/utility/ApplicationSetup.html">ApplicationSetup</a> will be replaced with a new non-global configuration API.</li>
+<li>The five field weighting model score() methods are being deprecated since only the two field versions are used.
+<li>Terrier currently uses Hadoop version 0.20. Future releases of Terrier will upgrade to a later branch. Instructions to upgrade Terrier yourself can be found <a href="http://ir.dcs.gla.ac.uk/wiki/Terrier/UpgradingHadoop">here</a></li> 
+</ul>
+
+<p>
+<b>Contributions</b><br>
+<p>All community contributions to the Terrier framework are welcome. 
+  In addition, you can find more information about contributing on 
+  the <a href="http://terrier.org/">Terrier website</a>.</p>
+
+[<a href="dfr_description.html">Previous: DFR Description</a>] [<a href="index.html">Contents</a>] [<a href="bibliography.html">Next: Bibliography</a>]
+<!--!bodyend-->
+<hr>
+<small> Webpage: <a href="http://terrier.org">http://terrier.org</a><br>
+Contact: <a href="mailto:terrier@dcs.gla.ac.uk">terrier@dcs.gla.ac.uk</a><br>
+<a href="http://www.dcs.gla.ac.uk/">School of Computing Science</a><br>
+Copyright (C) 2004-2014 <a href="http://www.gla.ac.uk/">University of Glasgow</a>. 
+All Rights Reserved. </small> 
+</body>
+</html>
